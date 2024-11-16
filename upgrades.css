@@ -1,0 +1,21 @@
+#upg1-d, #upg2-d, #upg3-d, #upg4-d {
+    display: none;
+}
+
+#upgrade1-btn:hover+#upg1-d, #upgrade2-btn:hover+#upg2-d, #upgrade3-btn:hover+#upg3-d, #upgrade4-btn:hover+#upg4-d {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .upgrade-btn {
+      width: 80%;
+      margin: 20px auto;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .upgrade-btn {
+      width: 90%;
+      margin: 10px auto;
+    }
+  }

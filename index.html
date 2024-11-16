@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BNB Clicker</title>
+    <link rel="icon" type="image/x-icon" href="media/image/bnbclickerlogoaltico.ico">
+    <link rel="stylesheet" href="bnbclicker.css">
+    <link rel="stylesheet" href="upgrades.css">
+    <link rel="stylesheet" href="mp.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dekko&family=Doto:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script src="bnbclicker.js" defer></script>
+    <script src="upgrades.js" defer></script>
+    <script src="mp.js" defer></script>
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <div class="background">
+            <img src="media/image/bnbclickerbg_animation.gif">
+        </div>
+
+        <div class="header">
+            <div class="headercol" id="logo">
+                <img src="media/image/bnbclickerlogoalt21.png">
+            </div>
+            <div class="headercol" id="scorecount">
+                <h2>Score:<span id="score">0</span></h2>
+            </div>
+
+            <div class="headercol">
+                <div class="mpwrapper">
+                    <div class="music-player">
+                        <!-- Left Section: Cover Art -->
+                        <div class="left">
+                            <div class="cover-art">
+                                <img id="cover-img" src="" alt="Cover Art">
+                            </div>
+                        </div>
+
+                        <!-- Right Section: Song Info and Controls -->
+                        <div class="right">
+                            <div class="song-info">
+                                <h2 id="song-title"></h2>
+                            </div>
+                            <div class="controls">
+                                <button id="prev-btn"><i class="fa-solid fa-backward"></i></button>
+                                <button id="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                                <button id="next-btn"><i class="fa-solid fa-forward"></i></button>
+                                <button id="shuffle-btn"><i class="fa-solid fa-shuffle"></i></button>
+                                <button id="repeat-btn"><i class="fa-solid fa-repeat"></i></button>
+                            </div>
+                            <div class="progress">
+                                <input type="range" id="progress-bar" value="0" max="100">
+                            </div>
+                        </div>
+
+                        <!-- Rightmost Section: Volume Slider -->
+                        <div class="volume">
+                            <input type="range" id="volume-slider" orient="vertical" min="0" max="1" step="0.01"
+                                value=".6">
+                        </div>
+                    </div>
+
+                    <!-- Hidden Audio Element -->
+                    <audio id="audio" src=""></audio>
+                </div>
+            </div>
+        </div>
+
+        <div class="main">
+            <div id="bnb">
+                <button onclick="startAnimation(); increaseScore(event)">
+                    <span id="bnbimage"><img src="media/image/bnb_default.jpg_large"></span>
+                </button>
+            </div>
+        </div>
+
+        <div class="info">
+            <h4 id="info-text">Click the BNB to increase your score</h4>
+            <h4 id="upg1-d">Doubles the score</h4>
+            <h4 id="upg2-d">Adds 1 score every 5 seconds</h4>
+            <h4 id="upg3-d">Spins the BNB, giving 40 points every 60 seconds</h4>
+            <h4 id="upg4-d">New BNB, triples the score</h4>
+        </div>
+
+        <div class="upg">
+
+            <div class="col">
+                <div id="upg1">
+                    <button onclick="upgrade1()" id="upgrade1-btn">
+                        <h3>Double click<br>(20 points)</h3>
+                    </button>
+                </div>
+                <div id="upg2">
+                    <button onclick="upgrade2()" id="upgrade2-btn">
+                        <h3>BNB companion<br>(100 points)</h3>
+                    </button>
+                </div>
+                <div id="upg3">
+                    <button onclick="upgrade3()" id="upgrade3-btn">
+                        <h3>Spinning BNB<br>(1000 points)</h3>
+                    </button>
+                </div>
+            </div>
+
+            <div class="col">
+                <div id="upg4">
+                    <button onclick="upgrade4()" id="upgrade4-btn">
+                        <h3>New BNB<br>(5000 points)</h3>
+                    </button>
+                </div>
+                <div id="upg5">
+                    <button>
+                        <h3>5. upgrade</h3>
+                    </button>
+                </div>
+                <div id="upg6">
+                    <button>
+                        <h3>6. upgrade</h3>
+                    </button>
+                </div>
+            </div>
+
+            <div class="col">
+                <div id="upg7">
+                    <button>
+                        <h3>7. upgrade</h3>
+                    </button>
+                </div>
+                <div id="upg8">
+                    <button>
+                        <h3>8. upgrade</h3>
+                    </button>
+                </div>
+                <div id="upg9">
+                    <button>
+                        <h3>9. upgrade</h3>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p>&copy; 2024 BNB Clicker. Zero rights reserved.</p>
+        </footer>
+    </div>
+</body>
+
+</html>
